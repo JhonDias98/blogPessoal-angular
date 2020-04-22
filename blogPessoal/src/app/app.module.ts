@@ -17,12 +17,12 @@ import { HttpClientModule } from '@angular/common/http'
     FeedComponent,
     NavbarComponent,
     FooterComponent,
-    HttpClientModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
