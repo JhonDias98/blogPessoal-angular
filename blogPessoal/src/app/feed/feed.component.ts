@@ -19,6 +19,8 @@ export class FeedComponent implements OnInit {
 
   ngOnInit() {
     this.findallPostagens()
+
+    window.scroll(0,0)
   }
 
   findallPostagens() {
