@@ -25,13 +25,13 @@
           <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/feed'>Feed</a>
         </li>
 
-        <div *ngIf="auth.btnLogin">
+        <div *ngIf="auth.btnLogin()">
           <li class="nav-item ">
             <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/login'>Login</a>
           </li>
         </div>
 
-        <div *ngIf="auth.btnLogin">
+        <div *ngIf="auth.btnLogin()">
           <li class="nav-item ">
             <a class="nav-link texto p-3 text-uppercase text-monospace font-weight-bold" routerLink='/cadastrar'>Cadastrar</a>
           </li>

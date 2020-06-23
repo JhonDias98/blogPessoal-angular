@@ -10,19 +10,19 @@ import { User } from '../model/User';
 })
 export class CadastroComponent implements OnInit {
 
-  user: User = new User
-  senha: string
+  user: User = new User();
+  senha: string;
 
   constructor(
     private authService: AuthService,
     private router: Router
     ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   cadastrar() {
-    if(this.senha == this.user.senha){
+    if(this.senha === this.user.senha){
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/login'])

@@ -10,26 +10,25 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class LoginComponent implements OnInit {
 
-  userLogin: UserLogin = new UserLogin()
+  userLogin: UserLogin = new UserLogin();
 
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   entrar() {
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
-
       localStorage.setItem('token', this.userLogin.token);
       localStorage.setItem('nome', this.userLogin.nome)
       this.router.navigate(['feed']);
     }, err => {
       alert("Erro ao logar, verifique email e senha")
-    })
+    });
   }
 
 }
