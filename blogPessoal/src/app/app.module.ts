@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { DeletarComponent } from './deletar/deletar.component';
     FooterComponent,
     EditarComponent,
     DeletarComponent,
+    LoginComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
